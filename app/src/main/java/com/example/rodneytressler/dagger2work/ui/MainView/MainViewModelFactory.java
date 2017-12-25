@@ -25,6 +25,9 @@ public class MainViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) new MainViewModel(pokemonApi);
+        if(modelClass.isAssignableFrom(MainViewModel.class)) {
+            return (T) new MainViewModel(pokemonApi);
+        }
+        return null;
     }
 }

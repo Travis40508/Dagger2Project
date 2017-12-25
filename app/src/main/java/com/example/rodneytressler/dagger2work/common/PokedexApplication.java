@@ -18,6 +18,9 @@ import dagger.android.HasActivityInjector;
  * Created by rodneytressler on 12/24/17.
  */
 
+/**This is where we set our dependency injection up. Ths dispatching Android injector specifies how it will inject inside of activities.
+ * Then we build our modules onCreate of our application class. Finally, in our activities, we use AndroidInjection.inject(this) BEFORE
+ * super(onCreate)*/
 public class PokedexApplication extends Application implements HasActivityInjector {
 
     @Inject

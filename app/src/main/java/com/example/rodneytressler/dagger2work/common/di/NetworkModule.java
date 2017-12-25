@@ -13,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by rodneytressler on 12/24/17.
  */
 
+/**This is a module providing objects. It's included in the ApplicationComponent, meaning any other module there will have access to these objects. */
 @Module
 public class NetworkModule {
 
